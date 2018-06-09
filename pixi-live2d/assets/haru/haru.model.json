@@ -1,0 +1,68 @@
+{
+	"type":"Live2D Model Setting",
+	"name":"haru",
+	"model":"haru.moc",
+	"textures":
+	[
+		"haru.1024/texture_00.png",
+		"haru.1024/texture_01.png",
+		"haru.1024/texture_02.png",
+		"haru.1024/texture_03.png"
+	],
+	"physics":"haru.physics.json",
+	"pose":"haru.pose.json",
+	"expressions":
+	[
+		{"name":"ah","file":"expressions/ah.exp.json"},
+		{"name":"are you uncomfortable","file":"expressions/are you uncomfortable.exp.json"},
+		{"name":"HE_A","file":"expressions/HE_A.exp.json"},
+		{"name":"idle_00","file":"expressions/idle_00.exp.json"},
+		{"name":"idle_01","file":"expressions/idle_01.exp.json"},
+		{"name":"idle_02","file":"expressions/idle_02.exp.json"},
+		{"name":"Right here here","file":"expressions/Right here here.exp.json"},
+		{"name":"RR hatehatehate","file":"expressions/RR hatehatehate.exp.json"},
+		{"name":"what are you doing.json","file":"expressions/what are you doing.expjson"},
+		{"name":"You are not right","file":"expressions/You are not right.exp.json"}
+	],
+	"layout":
+	{
+		"center_x":0,
+		"y":1.6,
+		"width":3.2
+	},
+	"hit_areas":
+	[
+		{"name":"head", "id":"D_REF.HEAD"},
+		{"name":"body", "id":"D_REF.BODY"}
+	],
+	"motions":
+	{
+		"idle":
+		[
+			{"file":"motions/idle_00.mtn" ,"fade_in":2000, "fade_out":2000},
+			{"file":"motions/idle_01.mtn" ,"fade_in":2000, "fade_out":2000}
+		],
+		"tap_body":
+		[
+			{ "file":"motions/HE_A" , "sound":"sounds/HE_A.mp3"},
+			{ "file":"motions/You are not right.mtn" , "sound":"sounds/You are not right.mp3"},
+			{ "file":"motions/RR hatehatehate.mtn" , "sound":"sounds/RR hatehatehate.mp3"}
+		],
+		"pinch_in":
+		[
+			{ "file":"motions/are you uncomfortable.mtn", "sound":"sounds/are you uncomfortable.mp3" }
+		],
+		"pinch_out":
+		[
+			{ "file":"motions/are you uncomfortable.mtn", "sound":"sounds/are you uncomfortable.mp3" }
+		],
+		"shake":
+		[
+			{ "file":"motions/what are you doing.mtn", "sound":"sounds/what are you doing.mp3","fade_in":2000 }
+		],
+		"flick_head":
+		[   { "file":"motions/ah" , "sound":"sounds/ah.mp3"},
+			{ "file":"motions/Right here here.mtn", "sound":"sounds/Right here here.mp3" }
+		]
+	}
+}
